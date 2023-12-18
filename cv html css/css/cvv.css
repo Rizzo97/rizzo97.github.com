@@ -1,0 +1,165 @@
+/* reglas generales */
+*{
+    margin:0px;
+    padding:10px;
+    box-sizing: border-box;
+}
+
+body
+    {
+    font-family: 'Montserrat', sans-serif;    
+}
+a {
+    text-decoration: none;
+}
+
+
+/*reglas individuales*/
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+    .header{
+        background: url(../imagenes/4_11.jpg);
+        background-position: center;
+        background-attachment: contain;
+        background-size: cover;
+        display: flex;
+        flex-flow:column nowrap ;
+    }
+        .menu{
+            background: rgba(0,0,0,.1);
+            display: flex;
+            flex-flow: row nowrap ;
+            height: 60px;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, .5);
+        }
+            .logo{
+               flex:1 1 auto;
+            }
+            /* ancla al logo para cambiar color y eliminar subrayado */
+                .logo a{
+                    color: #fff;
+                    font-size: 30px;
+                }
+                .logo a:hover{ 
+                    color: #f75656;
+                }
+
+
+            .nav{
+                flex:5 1 auto;
+            }
+                .nav a{
+                    color: #fff;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    padding: 0 10px;
+                    letter-spacing: 1px;
+                }
+                .nav a:hover{
+                    color: #f75656;
+                }
+
+
+            .social{
+                flex:1 1 auto;
+                display: flex;
+            
+            }
+                .social a{
+                    font-size: 18px;
+                    color: #fff;
+                    padding: 0 5px;
+                }
+                .social a:hover{
+                    color: #f75656;
+                    height: 580px;
+                    display: flex;
+                    
+                }
+
+        .texto-principal{
+           /* background: #f58549;  */
+        }
+            h1{
+                /* background: #F1EB90; */
+                font-family: 'Lora',serif;
+                font-size: 21px;
+                color:#fff;
+                font-weight: 300px;
+                text-align: center;
+                line-height: 1.6;
+            }
+
+
+
+    .section{
+        background: #000;
+        display: flex;
+    }
+        .articulos{
+            background: #164863;
+            flex:2 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+ 
+        }    
+            .article{
+                background: #48f5e66b;
+                flex:1 1 40% ;
+            }
+            .navegacion{
+                background: #9BBEC8;
+                flex:1 1 100% ;
+
+            }
+        .aside{
+            background: #ECE3CE;
+            flex: 1 1 auto;
+        }
+            .publicidad{
+                background: #ce871e;
+            }    
+    
+
+
+         
+            
+    .footer{
+        background: #000;
+        display: flex;
+        justify-content: center;
+    }
+        .pie{
+            background: #B0926A;
+            width: 300px;
+            
+        }
+
+
+    @media all and (max-width: 800px){
+        .section{
+            flex-direction: column;
+        }
+        .menu{
+            flex-direction: column;
+            height:auto ;
+        }
+        .aside{
+           display: flex; 
+           justify-content: center;
+        }
+    }
+    @media all and (max-width:600px){
+        .articulos{
+            flex-direction: column;
+        }
+    }
+
+    @media all and (max-width:400px){
+        .aside{
+            flex-direction: column;
+        }
+    }
